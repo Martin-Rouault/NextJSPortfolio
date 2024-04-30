@@ -12,7 +12,7 @@ export default function Home() {
         <div className="mt-20">
           <h2 className="text-xl font-bold ">Now</h2>
           <p className="text-md mt-3 text-neutral-200">
-            I'm currently working on a new project. I'm excited to share it with
+            I&apos;m currently working on a new project. I&apos;m excited to share it with
             you soon.
           </p>
         </div>
