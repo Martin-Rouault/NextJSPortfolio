@@ -1,12 +1,16 @@
-import NavBar from "../ui/home/navBar";
+import LatestProjects from "@/app/ui/latestProjects";
+import Link from "next/link";
+import Projects from "@/app/ui/projects/projects";
+import OtherProjects from "@/app/ui/projects/otherProjects";
 
 export default function Page() {
   return (
     <>
-      <div>
-        <h2 className="text-xl font-bold">My work</h2>
-      </div>
-      <NavBar />
+      <article>
+        <Projects />
+        <LatestProjects />
+        <OtherProjects />
+      </article>
     </>
   );
 }
