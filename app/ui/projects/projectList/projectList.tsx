@@ -1,7 +1,8 @@
 import Link from "next/link";
 import ProjectButton from "@/app/ui/projects/projectButton/projectButton";
+import { Project } from "@/app/lib/defintion";
 
-export default async function projectList({ project }) {
+export default async function projectList({ project }: { project: Project[] }) {
   return (
     <div className="flex flex-col justify-between mt-12 space-y-7">
       <ul className="space-y-6">

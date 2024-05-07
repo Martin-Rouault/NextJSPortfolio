@@ -47,7 +47,7 @@ export default function NavBar() {
               stroke-width="1.25"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-briefcase-business"
+              className="lucide lucide-briefcase-business"
             >
               <path d="M12 12h.01" />
               <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
