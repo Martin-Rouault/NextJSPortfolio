@@ -1,15 +1,17 @@
-import LatestProjects from "@/app/ui/latestProjects";
-import Link from "next/link";
-import Projects from "@/app/ui/projects/projects";
-import OtherProjects from "@/app/ui/projects/otherProjects";
+import LatestProjects from "@/app/ui/projects/projectLatest/projectLates";
+import ProjectList from "@/app/ui/projects/projectList/projectList";
+import Header from "@/app/ui/projects/header/header";
+import { fetchProject } from "../lib/data";
 
-export default function Page() {
+export default async function Page() {
+  const projects = await fetchProject();
+
   return (
     <>
       <article>
-        <Projects />
+        <Header />
         <LatestProjects />
-        <OtherProjects />
+        <ProjectList project={projects} />
       </article>
     </>
   );

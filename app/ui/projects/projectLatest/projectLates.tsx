@@ -1,9 +1,9 @@
-import PictureBackground from "@/app/ui/pictureBackground";
+import PictureBackground from "@/app/ui/pictureBackground/pictureBackground";
 
-export default function LatestProjects() {
+export default function ProjectLatest() {
   return (
     <div className="mt-20">
-      <h2 className="text-base font-bold ">Latest project</h2>
+      <h2 className="text-lg font-bold ">Latest project</h2>
       <div className="flex justify-between mt-3">
         <p className="text-base text-neutral-200">Here is my latest project.</p>
         <button className="text-neutral-200 text-base">

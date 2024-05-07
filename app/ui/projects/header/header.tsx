@@ -1,4 +1,4 @@
-export default function Projects() {
+export default function Header() {
   return (
     <>
       <h4 className="text-xl font-bold tracking-tighter mb-3 ">My work</h4>

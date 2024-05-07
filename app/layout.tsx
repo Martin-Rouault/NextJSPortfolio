@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased flex min-h-screen flex-col mx-auto py-20 px-4 z-10 w-full max-w-screen-sm`}
+        className={`${inter.className} antialiased flex min-h-screen flex-col mx-auto pt-12 pb-20 px-4 z-10 w-full max-w-screen-sm`}
       >
         {children}
         

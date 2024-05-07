@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 
-
-// why the import of cv is not working?
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -22,17 +20,18 @@ export default function NavBar() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              fill="none"
               stroke="currentColor"
-              className="w-6 h-6"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="lucide lucide-home"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-              />
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
           </div>
         </Link>
@@ -40,17 +39,20 @@ export default function NavBar() {
           <div className="hover:bg-neutral-900 p-2 rounded-xl  transition-colors duration-200 ease-in-out">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
+              fill="none"
               stroke="currentColor"
-              className="w-6 h-6"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-briefcase-business"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
-              />
+              <path d="M12 12h.01" />
+              <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+              <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+              <rect width="20" height="14" x="2" y="6" rx="2" />
             </svg>
           </div>
         </Link>
@@ -73,41 +75,54 @@ export default function NavBar() {
                 <a className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full">
                   <span>Linkedin</span>
                 </a>
-                <a className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full" >
+                <a className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full">
                   <span>Download.CV</span>
                 </a>
               </div>
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
+              fill="none"
               stroke="currentColor"
-              className="w-6 h-6"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="lucide lucide-grip-horizontal"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-              />
+              <circle cx="12" cy="9" r="1" />
+              <circle cx="19" cy="9" r="1" />
+              <circle cx="5" cy="9" r="1" />
+              <circle cx="12" cy="15" r="1" />
+              <circle cx="19" cy="15" r="1" />
+              <circle cx="5" cy="15" r="1" />
             </svg>
           </div>
         </button>
         <div className="hover:bg-neutral-900 p-2 rounded-xl transition-colors duration-200 ease-in-out">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            fill="none"
             stroke="currentColor"
-            className="w-6 h-6"
+            stroke-width="1.25"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="lucide lucide-sun"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-            />
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
           </svg>
         </div>
       </div>
