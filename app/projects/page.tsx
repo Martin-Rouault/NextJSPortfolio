@@ -11,6 +11,7 @@ export default async function Page() {
       <article>
         <Header />
         <LatestProjects />
+        {/* @ts-ignore */}
         <ProjectList project={projects} />
       </article>
     </>

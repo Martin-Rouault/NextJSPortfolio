@@ -10,3 +10,9 @@ export type Project = {
   title_3: string;
   content_3: string;
 };
+
+export type ProjectSingle = {
+  id: string;
+  small_description: string;
+  project_name: string;
+};
