@@ -11,11 +11,11 @@ export default function NavBar() {
   };
 
   return (
-    <div className="fixed bottom-4 inset-x-0 flex justify-center items-center">
-      <div className="  bg-black shadow-xl border-2 border-neutral-900 rounded-2xl flex justify-center items-center space-x-1 p-1 max-w-fit">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20 mx-auto mb-4 flex h-12 px-6">
+      <div className="pointer-events-auto relative mx-auto space-x-2 flex h-full bg-neutral-950 items-center rounded-[14px] bg-mauve-light-1 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
         <Link href="/">
           <div
-            className="hover:bg-neutral-900 p-2 rounded-xl transition-colors duration-200 ease-in-out"
+            className="hover:bg-neutral-900 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
             title="Home"
           >
             <svg
@@ -36,7 +36,7 @@ export default function NavBar() {
           </div>
         </Link>
         <Link href="/projects">
-          <div className="hover:bg-neutral-900 p-2 rounded-xl  transition-colors duration-200 ease-in-out">
+          <div className="hover:bg-neutral-900 p-2 rounded-[14px] transition-colors duration-200 ease-in-out">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -101,7 +101,7 @@ export default function NavBar() {
             </svg>
           </div>
         </button>
-        <div className="hover:bg-neutral-900 p-2 rounded-xl transition-colors duration-200 ease-in-out">
+        <div className="hover:bg-neutral-900 p-2 rounded-[14px] transition-colors duration-200 ease-in-out">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
