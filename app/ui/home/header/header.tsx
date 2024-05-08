@@ -6,6 +6,7 @@ export default function Header() {
       <Image
         alt="picture of me"
         src={martin}
+        placeholder="blur"
         className="rounded-full size-16 object-cover"
         loading="lazy"
       />
