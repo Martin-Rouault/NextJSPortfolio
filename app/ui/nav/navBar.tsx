@@ -114,7 +114,7 @@ export default function NavBar() {
                   <span className="font-mono">Linkedin</span>
                 </a>
                 <a
-                  href={CV}
+                  
                   className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full"
                   download
                 >
