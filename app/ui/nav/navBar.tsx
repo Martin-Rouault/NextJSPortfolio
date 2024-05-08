@@ -99,13 +99,25 @@ export default function NavBar() {
               }`}
             >
               <div className="flex flex-col items-start space-y-1 text-left">
-                <a className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full">
+                <a
+                  href="https://github.com/Martin-Rouault"
+                  target="_blank"
+                  className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full"
+                >
                   <span className="font-mono">GitHub</span>
                 </a>
-                <a className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full">
+                <a
+                  href="https://www.linkedin.com/in/martin-rouault/"
+                  target="_blank"
+                  className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full"
+                >
                   <span className="font-mono">Linkedin</span>
                 </a>
-                <a className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full">
+                <a
+                  href={CV}
+                  className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full"
+                  download
+                >
                   <span className="font-mono">Download.CV</span>
                 </a>
               </div>
