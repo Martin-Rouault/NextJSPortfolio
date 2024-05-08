@@ -100,13 +100,13 @@ export default function NavBar() {
             >
               <div className="flex flex-col items-start space-y-1 text-left">
                 <a className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full">
-                  <span>GitHub</span>
+                  <span className="font-mono">GitHub</span>
                 </a>
                 <a className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full">
-                  <span>Linkedin</span>
+                  <span className="font-mono">Linkedin</span>
                 </a>
                 <a className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full">
-                  <span>Download.CV</span>
+                  <span className="font-mono">Download.CV</span>
                 </a>
               </div>
             </div>
