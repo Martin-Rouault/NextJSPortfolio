@@ -14,7 +14,7 @@ export default function Header() {
         <h1 className="text-xl text font-bold tracking-tighter">
           Hey, I&apos;m martin 🖐️
         </h1>
-        <p className="text-neutral-400">Front-End Developer</p>
+        <p className="text-neutral-400 font-mono">Front-End Developer</p>
       </div>
     </div>
   );
