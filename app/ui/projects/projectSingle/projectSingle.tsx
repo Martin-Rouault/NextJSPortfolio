@@ -3,7 +3,6 @@ import PictureBackground from "@/app/ui/pictureBackground/pictureBackground";3
 
 export default function ProjectSingle({
   project_name,
-  small_description,
   description,
   title_1,
   content_1,
@@ -11,9 +10,9 @@ export default function ProjectSingle({
   content_2,
   title_3,
   content_3,
+  image_path,
 }: {
   project_name: string,
-  small_description: string,
   description: string,
   title_1: string,
   content_1: string,
@@ -21,6 +20,7 @@ export default function ProjectSingle({
   content_2: string,
   title_3: string,
   content_3: string,
+  image_path: string,
 }) {
   return (
     <>
@@ -68,7 +68,7 @@ export default function ProjectSingle({
           </a>
         </div>
         <p className="text-neutral-400 mb-12">{description}</p>
-        <PictureBackground imageSrc="/meteomojo.png" />
+        <PictureBackground imageSrc={image_path} />
         <div className="mt-12 flex flex-col">
           <p className="text-lg mb-3 font-semibold">{title_1}</p>
           <p className="text-neutral-400 mb-6">{content_1}</p>

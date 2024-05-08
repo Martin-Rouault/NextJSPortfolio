@@ -19,7 +19,6 @@ export default async function renderProject({
   const project = await getProject(params.id);
   return (
     <ProjectSingle
-      small_description={project.small_description}
       project_name={project.project_name}
       description={project.description}
       title_1={project.title_1}
@@ -28,6 +27,7 @@ export default async function renderProject({
       content_2={project.content_2}
       title_3={project.title_3}
       content_3={project.content_3}
+      image_path={project.image_path}
     />
   );
 }
