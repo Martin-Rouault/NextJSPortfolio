@@ -5,6 +5,19 @@ import { useState } from "react";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState({
+    home: false,
+    work: false,
+    theme: false,
+  });
+
+  const handleMouseEnter = (button: string) => {
+    setIsHovered({ ...isHovered, [button]: true });
+  };
+
+  const handleMouseLeave = (button: string) => {
+    setIsHovered({ ...isHovered, [button]: false });
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,7 +30,14 @@ export default function NavBar() {
           <div
             className="hover:bg-neutral-900 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
             title="Home"
+            onMouseEnter={() => handleMouseEnter("home")}
+            onMouseLeave={() => handleMouseLeave("home")}
           >
+            {isHovered.home && (
+              <div className="absolute left-0 bottom-14 bg-neutral-900 p-2 text-xs rounded-lg border-2 border-neutral-800">
+                Home
+              </div>
+            )}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -36,7 +56,17 @@ export default function NavBar() {
           </div>
         </Link>
         <Link href="/projects">
-          <div className="hover:bg-neutral-900 p-2 rounded-[14px] transition-colors duration-200 ease-in-out">
+          <div
+            className="hover:bg-neutral-900 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
+            title="Work"
+            onMouseEnter={() => handleMouseEnter("work")}
+            onMouseLeave={() => handleMouseLeave("work")}
+          >
+            {isHovered.work && (
+              <div className="absolute bottom-14 right-24 bg-neutral-900 p-2 text-xs rounded-lg border-2 border-neutral-800">
+                Work
+              </div>
+            )}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -101,7 +131,17 @@ export default function NavBar() {
             </svg>
           </div>
         </button>
-        <div className="hover:bg-neutral-900 p-2 rounded-[14px] transition-colors duration-200 ease-in-out">
+        <div
+          className="hover:bg-neutral-900 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
+          title="Theme"
+          onMouseEnter={() => handleMouseEnter("theme")}
+          onMouseLeave={() => handleMouseLeave("theme")}
+        >
+          {isHovered.theme && (
+            <div className="absolute bottom-14 right-0  bg-neutral-900 text-xs p-2 rounded-lg border-2 border-neutral-800">
+              Theme
+            </div>
+          )}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
