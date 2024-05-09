@@ -1,5 +1,6 @@
 import Link from "next/link";
-import PictureBackground from "@/app/ui/pictureBackground/pictureBackground";3
+import PictureBackground from "@/app/ui/pictureBackground/pictureBackground";import Image from "next/image";
+3
 
 export default function ProjectSingle({
   project_name,
@@ -22,7 +23,7 @@ export default function ProjectSingle({
   content_3: string,
   image_path: string,
 }) {
-console.log(image_path);
+console.log({image_path});
   
   return (
     <>
@@ -70,7 +71,15 @@ console.log(image_path);
           </a>
         </div>
         <p className="text-neutral-400 mb-12">{description}</p>
-        <PictureBackground imageSrc={image_path} />
+        <div className="flex justify-center items-center mt-3 bg-neutral-800 rounded-md border-neutral-700 border-2">
+      <Image
+        src={image_path}
+        width={1000}
+        height={1000}
+        alt="Picture of the project"
+        className="rounded-md"
+      />
+    </div>
         <div className="mt-12 flex flex-col">
           <p className="text-lg mb-3 font-semibold">{title_1}</p>
           <p className="text-neutral-400 mb-6">{content_1}</p>
