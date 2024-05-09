@@ -22,6 +22,8 @@ export default function ProjectSingle({
   content_3: string,
   image_path: string,
 }) {
+console.log(image_path);
+  
   return (
     <>
       <article>
