@@ -26,7 +26,7 @@ export default function ProjectLatest() {
           </button>
         </Link>
       </div>
-      <PictureBackground imageSrc="/webstellar.png" />
+      <PictureBackground imageSrc="/meteomojo.png" />
     </div>
   );
 }
