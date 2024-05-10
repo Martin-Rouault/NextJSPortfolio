@@ -19,3 +19,13 @@ export async function fetchProjectById(id: string) {
     throw new Error("Failed to fetch project data");
   }
 }
+
+export async function fetchProjectPictures(id: string) {
+  try {
+    const data = await sql`SELECT image_path from PROJECTS WHERE id = ${id}`;
+    return data.rows;
+  } catch (error) {
+    console.error("Database errror", error);
+    throw new Error("Failed to fetch project data");
+  }
+}
