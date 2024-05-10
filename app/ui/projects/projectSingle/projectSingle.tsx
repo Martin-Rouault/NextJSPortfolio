@@ -71,7 +71,7 @@ export default function ProjectSingle({
           </a>
         </div>
         <p className="text-neutral-400 mb-12">{description}</p>
-        {image_path && <PictureBackground imageSrc={image_path} />}
+        {image_path && <PictureBackground imageSrc={`/${image_path}`} />}
         <div className="mt-12 flex flex-col">
           <p className="text-lg mb-3 font-semibold">{title_1}</p>
           <p className="text-neutral-400 mb-6">{content_1}</p>
