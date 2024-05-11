@@ -1,7 +1,7 @@
 import {
   fetchProject,
   fetchProjectById,
-  fetchProjectPictures,
+  // fetchProjectPictures,
 } from "@/app/lib/data";
 import ProjectSingle from "@/app/ui/projects/projectSingle/projectSingle";
 
@@ -25,7 +25,7 @@ export default async function renderProject({
   //   fetchProjectPictures(params.id),
   // ]);
   const project = await getProject(params.id);
-  const image_src = await fetchProjectPictures(params.id);
+  // const image_src = await fetchProjectPictures(params.id);
   return (
     <ProjectSingle
       project_name={project.project_name}
@@ -36,7 +36,7 @@ export default async function renderProject({
       content_2={project.content_2}
       title_3={project.title_3}
       content_3={project.content_3}
-      image_src={image_src[0].image_path}
+      image_path={project.image_path}
     />
   );
 }
