@@ -8,7 +8,7 @@ export default function ProjectLatest() {
       <div className="flex justify-between mt-3">
         <p className="text-base text-neutral-200">Here is my latest project.</p>
         <Link href="projects/1">
-          <button className="text-neutral-200 text-base">
+          <button className="text-neutral-200 text-base" aria-label="project">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

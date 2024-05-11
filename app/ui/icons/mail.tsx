@@ -7,9 +7,9 @@ export default function Mail() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="1.25"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-mail mr-2"
     >
       <rect width="20" height="16" x="2" y="4" rx="2" />

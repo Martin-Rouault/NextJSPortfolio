@@ -9,6 +9,7 @@ export default function PictureBackground({ imageSrc }: { imageSrc: string }) {
         height={1000}
         alt="Picture of the project"
         className="rounded-md"
+        priority={true}
       />
     </div>
   );

@@ -45,9 +45,9 @@ export default function NavBar() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="1.25"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.25"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-home"
             >
               <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -74,9 +74,9 @@ export default function NavBar() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="1.25"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.25"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-briefcase-business"
             >
               <path d="M12 12h.01" />
@@ -86,7 +86,7 @@ export default function NavBar() {
             </svg>
           </div>
         </Link>
-        <button>
+        <button aria-label="menu">
           <div
             className="p-2 rounded-xl transition-colors duration-200 ease-in-out"
             onClick={toggleMenu}
@@ -114,9 +114,9 @@ export default function NavBar() {
                   <span className="font-mono">Linkedin</span>
                 </a>
                 <a
-                  
                   className="text-sm hover:bg-neutral-700 p-2 rounded-lg w-full"
                   download
+                  href="/cv-martin.pdf"
                 >
                   <span className="font-mono">Download.CV</span>
                 </a>
@@ -129,9 +129,9 @@ export default function NavBar() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-grip-horizontal"
             >
               <circle cx="12" cy="9" r="1" />
@@ -161,9 +161,9 @@ export default function NavBar() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.25"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.25"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-sun"
           >
             <circle cx="12" cy="12" r="4" />
