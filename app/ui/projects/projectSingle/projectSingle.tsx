@@ -11,7 +11,7 @@ export default function ProjectSingle({
   content_2,
   title_3,
   content_3,
-  image_path,
+  image_src,
 }: {
   project_name: string;
   description: string;
@@ -21,9 +21,9 @@ export default function ProjectSingle({
   content_2: string;
   title_3: string;
   content_3: string;
-  image_path: string;
+  image_src: string;
 }) {
-  console.log({ image_path });
+  console.log({ image_src });
 
   return (
     <>
@@ -71,7 +71,7 @@ export default function ProjectSingle({
           </a>
         </div>
         <p className="text-neutral-400 mb-12">{description}</p>
-        {image_path && <PictureBackground imageSrc={`/${image_path}`} />}
+        {image_src && <PictureBackground imageSrc={`/${image_src}`} />}
         <div className="mt-12 flex flex-col">
           <p className="text-lg mb-3 font-semibold">{title_1}</p>
           <p className="text-neutral-400 mb-6">{content_1}</p>

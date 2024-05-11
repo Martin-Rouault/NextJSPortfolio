@@ -1,4 +1,8 @@
-import { fetchProject, fetchProjectById } from "@/app/lib/data";
+import {
+  fetchProject,
+  fetchProjectById,
+  fetchProjectPictures,
+} from "@/app/lib/data";
 import ProjectSingle from "@/app/ui/projects/projectSingle/projectSingle";
 
 export async function generateStaticParams() {
@@ -16,8 +20,12 @@ export default async function renderProject({
 }: {
   params: { id: string };
 }) {
+  // const [project, image_src] = await Promise.all([
+  //   getProject(params.id),
+  //   fetchProjectPictures(params.id),
+  // ]);
   const project = await getProject(params.id);
-  // const image_src = await fetchProjectPictures(params.id);  
+  const image_src = await fetchProjectPictures(params.id);
   return (
     <ProjectSingle
       project_name={project.project_name}
@@ -28,7 +36,7 @@ export default async function renderProject({
       content_2={project.content_2}
       title_3={project.title_3}
       content_3={project.content_3}
-      image_path={project.image_path[0]}
+      image_src={image_src[0].image_path}
     />
   );
 }
