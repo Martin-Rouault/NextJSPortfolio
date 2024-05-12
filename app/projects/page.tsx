@@ -1,10 +1,10 @@
 import LatestProjects from "@/app/ui/projects/projectLatest/projectLates";
-import ProjectList from "@/app/ui/projects/projectList/projectList";
+// import ProjectList from "@/app/ui/projects/projectList/projectList";
 import Header from "@/app/ui/projects/header/header";
-import { fetchProject } from "../lib/data";
+// import { fetchProject } from "../lib/data";
 
 export default async function Page() {
-  const projects = await fetchProject();
+  // const projects = await fetchProject();
 
   return (
     <>
@@ -12,7 +12,7 @@ export default async function Page() {
         <Header />
         <LatestProjects />
         {/* @ts-ignore */}
-        <ProjectList project={projects} />
+        {/* <ProjectList project={projects} /> */}
       </article>
     </>
   );
