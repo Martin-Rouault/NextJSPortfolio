@@ -7,7 +7,7 @@ export default function ProjectLatest() {
       <h2 className="text-lg font-bold ">Latest project</h2>
       <div className="flex justify-between mt-3">
         <p className="text-base text-neutral-200">Here is my latest project.</p>
-        <Link href="projects/1">
+        <Link href="projects/2">
           <button className="text-neutral-200 text-base" aria-label="project">
             <svg
               xmlns="http://www.w3.org/2000/svg"
