@@ -51,6 +51,7 @@ export default function ProjectSingle({
           <a
             href="https://webstellar.io"
             target="_blank"
+            aria-label="website link"
             className="rounded-full transition-colors duration-200 ease-in-out bg-neutral-900 hover:bg-neutral-800 p-2"
           >
             <svg
