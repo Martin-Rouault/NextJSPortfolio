@@ -6,7 +6,7 @@ import { GeistMono } from 'geist/font/mono'
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Martin's Portfolio",
+  title: "Martin Rouault - Web Developer",
   description:
     "Hi! I'm Martin, a web developper from Paris. I love building cool and minimalist UIs. I'm passionate about interfaces, design and providing the best experience.",
 };
