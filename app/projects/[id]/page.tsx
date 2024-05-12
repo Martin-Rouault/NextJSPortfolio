@@ -40,3 +40,7 @@
 //     />
 //   );
 // }
+
+export default function renderProject() {
+  return <div>ProjectSingle</div>;
+}
