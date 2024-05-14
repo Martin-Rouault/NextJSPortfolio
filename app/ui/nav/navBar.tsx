@@ -26,10 +26,10 @@ export default function NavBar() {
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20 mx-auto mb-4 flex h-12 px-6">
-      <div className="pointer-events-auto relative mx-auto space-x-2 flex h-full items-center rounded-[14px] bg-white  dark:bg-neutral-800 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
+      <div className="pointer-events-auto relative mx-auto space-x-2 flex h-full items-center rounded-[14px] bg-white dark:bg-neutral-900 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
         <Link href="/">
           <div
-            className="hover:bg-neutral-200 dark:hover:bg-neutral-700 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
+            className="hover:bg-neutral-100 dark:hover:bg-neutral-800 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
             title="Home"
             onMouseEnter={() => handleMouseEnter("home")}
             onMouseLeave={() => handleMouseLeave("home")}
@@ -58,7 +58,7 @@ export default function NavBar() {
         </Link>
         <Link href="/projects">
           <div
-            className="hover:bg-neutral-200 dark:hover:bg-neutral-700 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
+            className="hover:bg-neutral-100 dark:hover:bg-neutral-800 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
             title="Work"
             onMouseEnter={() => handleMouseEnter("work")}
             onMouseLeave={() => handleMouseLeave("work")}
@@ -103,19 +103,19 @@ export default function NavBar() {
                 <a
                   href="https://github.com/Martin-Rouault"
                   target="_blank"
-                  className="text-sm hover:bg-neutral-200 dark:hover:bg-neutral-700 p-2 rounded-lg w-full"
+                  className="text-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 p-2 rounded-lg w-full"
                 >
                   <span className="font-mono">GitHub</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/martin-rouault/"
                   target="_blank"
-                  className="text-sm hover:bg-neutral-200 dark:hover:bg-neutral-700 p-2 rounded-lg w-full"
+                  className="text-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 p-2 rounded-lg w-full"
                 >
                   <span className="font-mono">Linkedin</span>
                 </a>
                 <a
-                  className="text-sm hover:bg-neutral-200 dark:hover:bg-neutral-700 p-2 rounded-lg w-full"
+                  className="text-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 p-2 rounded-lg w-full"
                   download
                   href="/cv-martin.pdf"
                 >
@@ -145,7 +145,7 @@ export default function NavBar() {
           </div>
         </button>
         <div
-          className="hover:bg-neutral-200 dark:hover:bg-neutral-700 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
+          className="hover:bg-neutral-100 dark:hover:bg-neutral-800 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
           title="Theme"
           onMouseEnter={() => handleMouseEnter("theme")}
           onMouseLeave={() => handleMouseLeave("theme")}

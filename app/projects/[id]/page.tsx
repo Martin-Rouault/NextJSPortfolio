@@ -7,7 +7,7 @@ export async function generateStaticParams() {
 }
 
 async function getProject(id: string) {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   const data = await fetchProjectById(id);
   return data;
 }

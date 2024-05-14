@@ -11,10 +11,10 @@ export default function Header() {
         loading="lazy"
       />
       <div className="flex items-start flex-col ml-3">
-        <h1 className="text-xl text font-bold tracking-tighter">
+        <h1 className="text-xl font-semibold tracking-tighter">
           hey, I&apos;m martin 🖐️
         </h1>
-        <p className="text-neutral-400 font-mono">Front-End Developer</p>
+        <span className="text-neutral-500 dark:text-neutral-400 font-mono">Front-End Developer</span>
       </div>
     </div>
   );

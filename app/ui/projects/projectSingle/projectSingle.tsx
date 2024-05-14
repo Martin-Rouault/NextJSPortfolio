@@ -28,14 +28,14 @@ export default function ProjectSingle({
     <>
       <article>
         <Link href="/projects">
-          <div className="flex items-center space-x-2">
+          <button className="flex items-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-4 h-4"
+              className="w-3 h-3"
             >
               <path
                 strokeLinecap="round"
@@ -43,16 +43,16 @@ export default function ProjectSingle({
                 d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
               />
             </svg>
-            <button className="text-sm">back to projects</button>
-          </div>
+            <p className="text-sm">back to all projects</p>
+          </button>
         </Link>
         <div className="flex justify-between items-center mt-20 mb-3">
-          <h5 className="text-xl font-semibold">{project_name}</h5>
+          <h5 className="text-lg font-medium">{project_name}</h5>
           <a
             href="https://webstellar.io"
             target="_blank"
             aria-label="website link"
-            className="rounded-full transition-colors duration-200 ease-in-out bg-neutral-900 hover:bg-neutral-800 p-2"
+            className="rounded-full transition-colors duration-200 ease-in-out hover:bg-neutral-300 dark:hover:bg-neutral-800 p-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,15 +70,23 @@ export default function ProjectSingle({
             </svg>
           </a>
         </div>
-        <p className="text-neutral-400 mb-12">{description}</p>
+        <p className="text-[17px] text-neutral-600 dark:text-neutral-400 mb-12">
+          {description}
+        </p>
         {image_path && <PictureBackground imageSrc={`/${image_path}`} />}
         <div className="mt-12 flex flex-col">
           <p className="text-lg mb-3 font-semibold">{title_1}</p>
-          <p className="text-neutral-400 mb-6">{content_1}</p>
+          <p className="text-[17px] text-neutral-600 dark:text-neutral-400 mb-6">
+            {content_1}
+          </p>
           <p className="text-lg mb-3 font-semibold">{title_2}</p>
-          <p className="text-neutral-400 mb-6">{content_2}</p>
+          <p className="text-[17px] text-neutral-600 dark:text-neutral-400 mb-6">
+            {content_2}
+          </p>
           <p className="text-lg mb-3 font-semibold">{title_3}</p>
-          <p className="text-neutral-400">{content_3}</p>
+          <p className="text-[17px] text-neutral-600 dark:text-neutral-400">
+            {content_3}
+          </p>
         </div>
       </article>
     </>
