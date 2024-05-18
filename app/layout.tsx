@@ -24,7 +24,9 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="antialiased flex min-h-screen flex-col mx-auto pt-12 pb-20 px-4 z-10 w-full max-w-screen-sm tracking-[0.010em]">
-        <Providers>{children}</Providers>
+        <Providers>
+          <main>{children}</main>
+        </Providers>
         <Analytics />
         <SpeedInsights />
       </body>

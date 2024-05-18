@@ -3,6 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ThemeButton } from "../themeButton/themeButton";
+import Home from "../icons/home";
+import Work from "../icons/work";
+import { usePathname } from "next/navigation";
+
+const links = [
+  { href: "/", svg: <Home /> },
+  { href: "/projects", svg: <Work /> },
+];
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,69 +32,24 @@ export default function NavBar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const path = usePathname();
+
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20 mx-auto mb-4 flex h-12 px-6">
-      <div className="pointer-events-auto relative mx-auto space-x-2 flex h-full items-center rounded-[14px] bg-white dark:bg-neutral-900 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
-        <Link href="/">
-          <div
-            className="hover:bg-neutral-100 dark:hover:bg-neutral-800 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
-            title="Home"
-            onMouseEnter={() => handleMouseEnter("home")}
-            onMouseLeave={() => handleMouseLeave("home")}
-          >
-            {isHovered.home && (
-              <div className="absolute left-0 bottom-14 bg-white dark:bg-neutral-800 p-2 text-xs rounded-lg">
-                Home
+      <div className="pointer-events-auto relative mx-auto space-x-3 flex h-full items-center rounded-[14px] bg-white dark:bg-neutral-900 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
+        {links.map((link) => (
+          <div key={link.href}>
+            <Link href={link.href}>
+              <div
+                className={`${
+                  link.href === path && "bg-neutral-100 dark:bg-neutral-800"
+                } p-2 rounded-[14px]  transition-colors duration-200 ease-in-out`}
+              >
+                {link.svg}
               </div>
-            )}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.25"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-home"
-            >
-              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
+            </Link>
           </div>
-        </Link>
-        <Link href="/projects">
-          <div
-            className="hover:bg-neutral-100 dark:hover:bg-neutral-800 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
-            title="Work"
-            onMouseEnter={() => handleMouseEnter("work")}
-            onMouseLeave={() => handleMouseLeave("work")}
-          >
-            {isHovered.work && (
-              <div className="absolute bottom-14 right-24 bg-white dark:bg-neutral-800 p-2 text-xs rounded-lg">
-                Work
-              </div>
-            )}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.25"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-briefcase-business"
-            >
-              <path d="M12 12h.01" />
-              <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-              <path d="M22 13a18.15 18.15 0 0 1-20 0" />
-              <rect width="20" height="14" x="2" y="6" rx="2" />
-            </svg>
-          </div>
-        </Link>
+        ))}
         <button aria-label="menu">
           <div
             className="p-2 rounded-xl transition-colors duration-200 ease-in-out"

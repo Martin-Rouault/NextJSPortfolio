@@ -4,7 +4,7 @@ import { Project } from "@/app/lib/defintion";
 
 export default async function projectList({ project }: { project: Project[] }) {
   return (
-    <div className="flex flex-col justify-between mt-12 space-y-7">
+    <div className="flex flex-col justify-between mt-20 space-y-7">
       <p className="text-lg font-medium">Other projects...</p>
       <ul className="space-y-5">
         {project.map((project) => (
