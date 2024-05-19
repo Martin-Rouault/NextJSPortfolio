@@ -1,21 +1,28 @@
+import Heading from "@/app/ui/block/heading";
 import PictureBackground from "@/app/ui/pictureBackground/pictureBackground";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronRightIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 export function ButtonIcon() {
   return (
-    <Button variant="ghost" size="icon">
+    <Button variant="ghost" size="icon" aria-label="button">
       <ArrowRightIcon className="h-4 w-4" />
     </Button>
   );
 }
 
-export default function ProjectLatest() {
+export default function ProjectLatest({
+  title,
+  headingLevel = "h1",
+}: {
+  title: string;
+  headingLevel?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+}) {
   return (
     <div className="mt-20">
-      <div className="flex justify-between mt-3">
-        <h2 className="text-lg font-medium">Latest project</h2>
+      <div className="flex justify-between">
+        <Heading title={title} headingLevel={headingLevel} />
         <Link href="projects/2">
           <ButtonIcon />
         </Link>

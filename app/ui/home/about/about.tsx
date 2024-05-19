@@ -20,10 +20,10 @@ export default function About() {
           web developer."
           headingLevel="h3"
         />
-        <p className="mt-2 text-[17px] text-neutral-600 dark:text-neutral-400">
-          If you&apos;d like give me a opportunity, feel free to send me an
-          email.
-        </p>
+        <TextBlock
+          text=" If you'd like give me a opportunity, feel free to send me an
+          email."
+        />
       </div>
     </>
   );

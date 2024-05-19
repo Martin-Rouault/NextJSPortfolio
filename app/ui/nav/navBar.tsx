@@ -39,7 +39,7 @@ export default function NavBar() {
       <div className="pointer-events-auto relative mx-auto space-x-3 flex h-full items-center rounded-[14px] bg-white dark:bg-neutral-900 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
         {links.map((link) => (
           <div key={link.href}>
-            <Link href={link.href}>
+            <Link href={link.href} aria-label="link">
               <div
                 className={`${
                   link.href === path && "bg-neutral-100 dark:bg-neutral-800"

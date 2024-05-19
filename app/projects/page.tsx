@@ -10,7 +10,7 @@ export default async function Page() {
     <>
       <article>
         <Header />
-        <LatestProjects />
+        <LatestProjects title="Latest Project" headingLevel="h2"/>
         {/* @ts-ignore */}
         <ProjectList project={projects} />
       </article>

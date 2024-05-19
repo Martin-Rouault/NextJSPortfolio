@@ -10,7 +10,7 @@ export default function Home() {
       <main>
         <Header />
         <About />
-        <LatestProjects />
+        <LatestProjects headingLevel="h4" title="Latest Project" />
         <Contact />
       </main>
       <NavBar />
