@@ -1,7 +1,6 @@
 import LatestProjects from "@/components/component/projects/projectLates";
 import ProjectList from "@/components/component/projects/projectList";
 import Header from "@/components/component/projects/header";
-import { fetchProject } from "../lib/data";
 import data from "@/app/locales/data.json";
 
 export default function Page() {
