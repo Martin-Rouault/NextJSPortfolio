@@ -2,14 +2,20 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ThemeButton } from "../themeButton/themeButton";
-import Home from "../icons/home";
-import Work from "../icons/work";
 import { usePathname } from "next/navigation";
+import { ThemeButton } from "./theme/theme";
+import Home from "@/app/icons/home";
+import Work from "@/app/icons/work";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const links = [
-  { href: "/", svg: <Home /> },
-  { href: "/projects", svg: <Work /> },
+  { href: "/", tooltip: "Home", svg: <Home /> },
+  { href: "/projects", tooltip: "Work", svg: <Work /> },
 ];
 
 export default function NavBar() {
@@ -36,18 +42,28 @@ export default function NavBar() {
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20 mx-auto mb-4 flex h-12 px-6">
-      <div className="pointer-events-auto relative mx-auto space-x-3 flex h-full items-center rounded-[14px] bg-white dark:bg-neutral-900 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
+      <div className="pointer-events-auto relative mx-auto space-x-2 flex h-full items-center rounded-[14px] bg-white dark:bg-neutral-900 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
         {links.map((link) => (
           <div key={link.href}>
-            <Link href={link.href} aria-label="link">
-              <div
-                className={`${
-                  link.href === path && "bg-neutral-100 dark:bg-neutral-800"
-                } p-2 rounded-[14px]  transition-colors duration-200 ease-in-out`}
-              >
-                {link.svg}
-              </div>
-            </Link>
+            <TooltipProvider delayDuration={100}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link href={link.href} aria-label="link">
+                    <div
+                      className={`${
+                        link.href === path &&
+                        "bg-neutral-100 dark:bg-neutral-800"
+                      } p-2 rounded-[14px] transition-colors duration-300 ease-in-out`}
+                    >
+                      {link.svg}
+                    </div>
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{link.tooltip}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         ))}
         <button aria-label="menu">
@@ -107,19 +123,7 @@ export default function NavBar() {
             </svg>
           </div>
         </button>
-        <div
-          className="hover:bg-neutral-100 dark:hover:bg-neutral-800 p-2 rounded-[14px] transition-colors duration-200 ease-in-out"
-          title="Theme"
-          onMouseEnter={() => handleMouseEnter("theme")}
-          onMouseLeave={() => handleMouseLeave("theme")}
-        >
-          {isHovered.theme && (
-            <div className="absolute bottom-14 right-0 bg-white dark:bg-neutral-800 text-xs p-2 rounded-lg">
-              Theme
-            </div>
-          )}
-          <ThemeButton />
-        </div>
+        <ThemeButton />
       </div>
     </div>
   );

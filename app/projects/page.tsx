@@ -1,19 +1,19 @@
-import LatestProjects from "@/app/ui/projects/projectLatest/projectLates";
-import ProjectList from "@/app/ui/projects/projectList/projectList";
-import Header from "@/app/ui/projects/header/header";
+import LatestProjects from "@/components/component/projects/projectLates";
+import ProjectList from "@/components/component/projects/projectList";
+import Header from "@/components/component/projects/header";
 import { fetchProject } from "../lib/data";
+import data from "@/app/locales/data.json";
 
-export default async function Page() {
-  const projects = await fetchProject();
+export default function Page() {
+  const projects = data;
 
   return (
     <>
-      <article>
+      <div>
         <Header />
-        <LatestProjects title="Latest Project" headingLevel="h2"/>
-        {/* @ts-ignore */}
+        <LatestProjects title="Latest Project" headingLevel="h2" />
         <ProjectList project={projects} />
-      </article>
+      </div>
     </>
   );
 }

@@ -1,22 +1,17 @@
-import Heading from "./heading";
+import { cn } from "@/lib/utils";
 
-export default function TextBlock({
-  title,
-  text,
-  headingLevel = "p",
-  className,
-}: {
-  title?: string;
-  text: string;
-  headingLevel?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+type TextBlockProps = {
+  children: React.ReactNode;
   className?: string;
-}) {
+} & React.HTMLAttributes<HTMLElement>;
+
+export default function TextBlock({ className, children }: TextBlockProps) {
+  const TextBlock = "p";
   return (
-    <div>
-      <Heading title={title} headingLevel={headingLevel} />
-      <p className={`text-[17px] mt-3 text-neutral-600 dark:text-neutral-400 leading-7 ${className}`}>
-        {text}
-      </p>
-    </div>
+    <TextBlock
+      className={cn("text-muted-foreground/90 mt-2 leading-6 text-balance", className)}
+    >
+      {children}
+    </TextBlock>
   );
 }

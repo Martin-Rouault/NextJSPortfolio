@@ -1,5 +1,5 @@
-import { fetchProject, fetchProjectById } from "@/app/lib/data";
-import ProjectSingle from "@/app/ui/projects/projectSingle/projectSingle";
+import { fetchProject, fetchingProjectById } from "@/app/lib/data";
+import ProjectSingle from "@/components/component/projects/projectSingle";
 import Link from "next/link";
 import data from "@/app/locales/data.json";
 
@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 }
 
 async function getProject(id: string) {
-  const data = await fetchProjectById(id);
+  const data = await fetchingProjectById(id);
   return data;
 }
 
@@ -50,6 +50,7 @@ export default async function renderProject({
         title_3={project.title_3}
         content_3={project.content_3}
         image_path={project.image_path}
+        link={project.link}
       />
     </article>
   );

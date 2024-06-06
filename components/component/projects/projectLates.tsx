@@ -1,5 +1,5 @@
 import Heading from "@/app/ui/block/heading";
-import PictureBackground from "@/app/ui/pictureBackground/pictureBackground";
+import PictureBackground from "@/components/component/pictureBackground";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
@@ -22,7 +22,9 @@ export default function ProjectLatest({
   return (
     <div className="mt-20">
       <div className="flex justify-between">
-        <Heading title={title} headingLevel={headingLevel} />
+        <Heading headingLevel={headingLevel}>
+          {title}
+        </Heading>
         <Link href="projects/2">
           <ButtonIcon />
         </Link>

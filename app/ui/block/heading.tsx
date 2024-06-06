@@ -1,10 +1,26 @@
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type HeadingProps = {
+  headingLevel: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+  className?: string;
+  children: React.ReactNode;
+} & React.HTMLAttributes<HTMLElement>;
+
 export default function Heading({
-  title,
-  headingLevel = "p", // Default value
-}: {
-  title?: string;
-  headingLevel?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p"; // Optional, by default is "p" tag
-}) {
+  headingLevel,
+  className,
+  children,
+}: HeadingProps) {
   const Heading = headingLevel;
-  return <Heading className="text-lg font-medium">{title}</Heading>;
+  return (
+    <Heading
+      className={cn(
+        "scroll-m-20 text-lg font-semibold tracking-tight",
+        className
+      )}
+    >
+      {children}
+    </Heading>
+  );
 }
