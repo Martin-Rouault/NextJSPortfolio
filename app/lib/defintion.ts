@@ -1,6 +1,7 @@
 export type Project = {
   id: number;
   project_name: string;
+  image_path: string;
   small_description: string;
   description: string;
   title_1: string;

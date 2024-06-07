@@ -30,7 +30,7 @@ export default function ProjectSingle({
 
   return (
     <>
-      <div className="flex justify-between items-center mt-20 mb-2">
+      <article className="flex justify-between items-center mt-20">
         <Heading headingLevel="h1">{project_name}</Heading>
         <Link
           href={link}
@@ -53,10 +53,12 @@ export default function ProjectSingle({
             />
           </svg>
         </Link>
-      </div>
+      </article>
+
       <TextBlock className="mb-12">{description}</TextBlock>
+
       {image_path && <PictureBackground imageSrc={`/${image_path}`} />}
-      <div className="mt-12 flex flex-col space-y-6">
+      <div className="mt-12 flex flex-col space-y-5">
         <article>
           <Heading headingLevel="h2">{title_1}</Heading>
           <TextBlock title={title_1}>{content_1}</TextBlock>

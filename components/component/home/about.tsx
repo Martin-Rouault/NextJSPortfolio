@@ -14,9 +14,9 @@ export default function About() {
           design and providing a great experience.
         </TextBlock>
       </div>
-      <div className="flex flex-col space-y-1">
+      <div className="flex flex-col space-y-1 ">
         <Heading headingLevel="h3">Now</Heading>
-        <TextBlock>
+        <TextBlock className="text-primary">
           I&apos;m currently working on a few projects, leveling up my skills, and
           learning new things. I&apos;m also searching for a internship as web
           developer.

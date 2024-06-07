@@ -16,7 +16,7 @@ export default function Heading({
   return (
     <Heading
       className={cn(
-        "scroll-m-20 text-lg font-semibold tracking-tight",
+        "scroll-m-20 mb-2 text-xl font-medium tracking-tighter",
         className
       )}
     >

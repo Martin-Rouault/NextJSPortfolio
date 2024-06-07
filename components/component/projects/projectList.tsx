@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Project } from "@/app/lib/defintion";
 import Heading from "@/app/ui/block/heading";
 import TextBlock from "@/app/ui/block/textBlock";
+import { CardVO } from "@/app/ui/block/cardDemo";
 
 export default async function ProjectList({ project }: { project: Project[] }) {
   return (
