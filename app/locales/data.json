@@ -2,8 +2,10 @@
   {
     "id": 1,
     "project_name": "Webstellar",
+    "slug": "webstellar",
     "small_description": "Full-stack project on the theme of astronomy and space.",
     "image_path": "webstellar.png",
+    "link": "https://webstellar-xenon.vercel.app",
     "description": "WebStellar is a collaborative project from my training. Inspired by our fascination with astronomy and space, WebStellar provides an immersive online experience where users can explore, learn, and engage with the vast digital universe.",
     "title_1": "Blog",
     "content_1": "Learn about space with articles on new discoveries, cool facts about planets, and explanations of space things. The user can also leave comments to share his thoughts and learn more.",
@@ -15,8 +17,10 @@
   {
     "id": 2,
     "project_name": "MétéoMojo",
+    "slug": "meteomojo",
     "small_description": "A cool and minimalist weather app.",
     "image_path": "meteomojo.png",
+    "link": "https://meteomojo.vercel.app",
     "description": "MétéoMojo is a small web application that gives you the weather in real time for the city you want. No ads, just what you need in one click.",
     "title_1": "Built-in auto-completion",
     "content_1": "Auto-completion allows you to have a more precise city search by offering suggestions of matching cities as you type the first few letters.",

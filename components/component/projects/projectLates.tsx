@@ -25,7 +25,7 @@ export default function ProjectLatest({
         <Heading headingLevel={headingLevel}>
           {title}
         </Heading>
-        <Link href="projects/2">
+        <Link href="projects/o-weather">
           <ButtonIcon />
         </Link>
       </div>

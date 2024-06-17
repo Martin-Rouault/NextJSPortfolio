@@ -1,7 +1,9 @@
-export type Project = {
+export type ProjectType = {
   id: number;
+  slug: string;
   project_name: string;
   image_path: string;
+  link: string;
   small_description: string;
   description: string;
   title_1: string;

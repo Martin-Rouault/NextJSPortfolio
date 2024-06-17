@@ -8,7 +8,7 @@ type TextBlockProps = {
 export default function TextBlock({ className, children }: TextBlockProps) {
   const TextBlock = "p";
   return (
-    <article className="prose dark:prose-invert">
+    <article className="">
       <TextBlock className={cn("text-primary leading-6", className)}>
         {children}
       </TextBlock>

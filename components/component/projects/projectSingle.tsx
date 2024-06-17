@@ -2,38 +2,15 @@ import Link from "next/link";
 import PictureBackground from "@/components/component/pictureBackground";
 import TextBlock from "@/app/ui/block/textBlock";
 import Heading from "@/app/ui/block/heading";
+import { ProjectType } from "@/app/lib/defintion";
 
-export default function ProjectSingle({
-  project_name,
-  description,
-  title_1,
-  content_1,
-  title_2,
-  content_2,
-  title_3,
-  content_3,
-  image_path,
-  link,
-}: {
-  project_name: string;
-  description: string;
-  title_1: string;
-  content_1: string;
-  title_2: string;
-  content_2: string;
-  title_3: string;
-  content_3: string;
-  image_path: string;
-  link: string;
-}) {
-  console.log({ image_path });
-
+export default function ProjectSingle({ project }: { project: ProjectType }) {
   return (
     <>
       <article className="flex justify-between items-center mt-20">
-        <Heading headingLevel="h1">{project_name}</Heading>
+        <Heading headingLevel="h1">{project.project_name}</Heading>
         <Link
-          href={link}
+          href={project.link}
           target="_blank"
           aria-label="website link"
           className="rounded-full transition-colors duration-200 ease-in-out hover:bg-neutral-300 dark:hover:bg-neutral-800 p-2"
@@ -55,21 +32,23 @@ export default function ProjectSingle({
         </Link>
       </article>
 
-      <TextBlock className="mb-12">{description}</TextBlock>
+      <TextBlock className="mb-12">{project.description}</TextBlock>
 
-      {image_path && <PictureBackground imageSrc={`/${image_path}`} />}
+      {project.image_path && (
+        <PictureBackground imageSrc={`/${project.image_path}`} />
+      )}
       <div className="mt-12 flex flex-col space-y-5">
         <article>
-          <Heading headingLevel="h2">{title_1}</Heading>
-          <TextBlock title={title_1}>{content_1}</TextBlock>
+          <Heading headingLevel="h2">{project.title_1}</Heading>
+          <TextBlock title={project.title_1}>{project.content_1}</TextBlock>
         </article>
         <article>
-          <Heading headingLevel="h3">{title_2}</Heading>
-          <TextBlock title={title_2}>{content_2}</TextBlock>
+          <Heading headingLevel="h3">{project.title_2}</Heading>
+          <TextBlock title={project.title_2}>{project.content_2}</TextBlock>
         </article>
         <article>
-          <Heading headingLevel="h4">{title_3}</Heading>
-          <TextBlock title={title_3}>{content_3}</TextBlock>
+          <Heading headingLevel="h4">{project.title_3}</Heading>
+          <TextBlock title={project.title_3}>{project.content_3}</TextBlock>
         </article>
       </div>
     </>

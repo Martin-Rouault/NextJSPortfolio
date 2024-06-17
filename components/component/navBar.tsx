@@ -42,7 +42,7 @@ export default function NavBar() {
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20 mx-auto mb-4 flex h-12 px-6">
-      <div className="pointer-events-auto relative mx-auto space-x-2 flex h-full items-center rounded-[14px] bg-white dark:bg-neutral-900 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
+      <div className="pointer-events-auto relative mx-auto space-x-2 flex h-full items-center rounded-[14px] bg-white dark:bg-neutral-900 px-0.5 shadow-[rgba(142,140,152,0.3)_0px_0px_20px,rgba(219,216,224,0.2)_0px_0px_0px_1px]">
         {links.map((link) => (
           <div key={link.href}>
             <TooltipProvider delayDuration={100}>
@@ -51,7 +51,7 @@ export default function NavBar() {
                   <Link href={link.href} aria-label="link">
                     <div
                       className={`${
-                        link.href === path &&
+                        path === link.href &&
                         "bg-neutral-100 dark:bg-neutral-800"
                       } p-2 rounded-[14px] transition-colors duration-300 ease-in-out`}
                     >

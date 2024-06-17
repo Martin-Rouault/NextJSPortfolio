@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Project } from "@/app/lib/defintion";
+import { ProjectType } from "@/app/lib/defintion";
 import Heading from "@/app/ui/block/heading";
 import TextBlock from "@/app/ui/block/textBlock";
 import { CardVO } from "@/app/ui/block/cardDemo";
 
-export default async function ProjectList({ project }: { project: Project[] }) {
+export default function ProjectList({ project }: { project: ProjectType[] }) {
   return (
     <div className="mt-20">
       <Heading headingLevel="h3">My projects</Heading>

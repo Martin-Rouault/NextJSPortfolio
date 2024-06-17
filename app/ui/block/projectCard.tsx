@@ -1,17 +1,16 @@
-import { Project } from "@/app/lib/defintion";
+import { ProjectType } from "@/app/lib/defintion";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import Image from "next/image";
 
-export function CardVO({ projects }: { projects: Project[] }) {
+export function ProjectCard({ projects }: { projects: ProjectType[] }) {
   return (
     <>
       <section className="grid gap-6 sm:grid-cols-2">
         {projects.map((project) => (
           <Link
-            href={`/projects/${project.id}`}
+            href={`/projects/${project.slug}`}
             className="group rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-colors hover:bg-gray-50 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800"
-            prefetch={false}
             key={project.id}
           >
             <div className="aspect-video overflow-hidden rounded-lg">

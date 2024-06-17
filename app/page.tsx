@@ -7,7 +7,7 @@ import NavBar from "@/components/component/navBar";
 export default function Home() {
   return (
     <>
-      <main>
+      <main  className="animate-fade-in-down">
         <Header />
         <About />
         <LatestProjects headingLevel="h4" title="Latest Project" />
