@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ProjectType } from "@/app/lib/defintion";
 import Heading from "@/app/ui/block/heading";
 import TextBlock from "@/app/ui/block/textBlock";
-import { CardVO } from "@/app/ui/block/cardDemo";
 
 export default function ProjectList({ project }: { project: ProjectType[] }) {
   return (
