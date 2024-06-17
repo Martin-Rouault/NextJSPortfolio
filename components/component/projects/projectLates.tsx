@@ -29,7 +29,7 @@ export default function ProjectLatest({
           <ButtonIcon />
         </Link>
       </div>
-      <PictureBackground imageSrc="/meteomojo.png" />
+      <PictureBackground imageSrc="/o-weather.png" />
     </div>
   );
 }
