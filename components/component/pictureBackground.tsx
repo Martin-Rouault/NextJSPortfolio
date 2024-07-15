@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PictureBackground({ imageSrc }: { imageSrc: string }) {
   return (
-    <div className="flex justify-center items-center mt-3 rounded-md ">
+    <div className="mt-3 border border-gray-200 p-4 dark:border-neutral-800 dark:bg-neutral-900 rounded-md ">
       <Image
         src={imageSrc}
         width={1000}
