@@ -23,8 +23,9 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="antialiased max-w-2xl mb-32 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">
+      <body className="antialiased max-w-xl mb-32 flex flex-col md:flex-row mx-4 mt-20 lg:mx-auto">
         <Providers>
+          <div className="pointer-events-none fixed left-0 top-0 z-50 h-12 w-full bg-neutral-100 to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)] dark:bg-neutral-900"></div>
           <main>{children}</main>
         </Providers>
         <Analytics />

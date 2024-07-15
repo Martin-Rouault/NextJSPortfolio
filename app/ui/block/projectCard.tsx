@@ -19,17 +19,14 @@ export function ProjectCard({ projects }: { projects: ProjectType[] }) {
                 alt="Project 1"
                 width={1000}
                 height={1000}
-                className="h-full w-full object-cover object-center transition-transform duration-200 group-hover:scale-105"
+                className="h-full w-full object-cover object-center"
               />
             </div>
             <div className="mt-4 flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-medium tracking-tighter">
+                <h3 className="text-lg font-medium">
                   {project.project_name}
                 </h3>
-                <p className="text-sm text-muted-foreground">
-                  {project.small_description}
-                </p>
               </div>
               <div className="inline-flex items-center justify-center rounded-full bg-gray-100 p-2 text-neutral-900 dark:bg-neutral-900 dark:text-gray-50">
                 <ArrowRightIcon className="h-4 w-4" />

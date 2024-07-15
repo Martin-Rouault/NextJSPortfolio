@@ -5,7 +5,7 @@ import Mail from "@/app/icons/mail";
 
 export default function Contact() {
   return (
-    <footer className="mt-20">
+    <footer className="mt-16">
       <Heading headingLevel="h5">Contact</Heading>
       <div className="flex flex-col mt-3">
         <ul className="space-y-3">

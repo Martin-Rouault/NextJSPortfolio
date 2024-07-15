@@ -14,12 +14,7 @@ export default function Heading({
 }: HeadingProps) {
   const Heading = headingLevel;
   return (
-    <Heading
-      className={cn(
-        "scroll-m-20 mb-2 text-xl font-medium tracking-tighter",
-        className
-      )}
-    >
+    <Heading className={cn("scroll-m-20 mb-2 text-lg font-medium", className)}>
       {children}
     </Heading>
   );

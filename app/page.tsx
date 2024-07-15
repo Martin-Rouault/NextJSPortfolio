@@ -7,7 +7,7 @@ import NavBar from "@/components/component/navBar";
 export default function Home() {
   return (
     <>
-      <main  className="animate-fade-in-down">
+      <main className="animate-fade-in-down flex flex-col">
         <Header />
         <About />
         <LatestProjects headingLevel="h4" title="Latest Project" />

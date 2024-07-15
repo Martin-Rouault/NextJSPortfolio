@@ -7,7 +7,7 @@ import Heading from "@/app/ui/block/heading";
 
 export default function Header() {
   return (
-    <div className="flex items-center mb-20">
+    <div className="flex items-center mb-16">
       <Image
         alt="picture of me"
         src={martin}

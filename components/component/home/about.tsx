@@ -5,8 +5,8 @@ import Head from "next/head";
 
 export default function About() {
   return (
-    <div>
-      <div className="flex flex-col space-y-1 mb-20">
+    <div className="flex flex-col space-y-16">
+      <div className="flex flex-col space-y-1">
         <Heading headingLevel="h2">About me</Heading>
         <TextBlock>
           Hi, I&apos;m Martin I love crafting cool and minimalist UIs with {""}
@@ -16,7 +16,7 @@ export default function About() {
       </div>
       <div className="flex flex-col space-y-1 ">
         <Heading headingLevel="h3">Now</Heading>
-        <TextBlock className="text-primary">
+        <TextBlock className="">
           I&apos;m currently working on a few projects, leveling up my skills, and
           learning new things. I&apos;m also searching for a internship as web
           developer.
