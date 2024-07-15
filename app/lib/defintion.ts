@@ -4,7 +4,6 @@ export type ProjectType = {
   project_name: string;
   image_path: string;
   link: string;
-  small_description: string;
   description: string;
   title_1: string;
   content_1: string;

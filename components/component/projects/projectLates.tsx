@@ -22,14 +22,12 @@ export default function ProjectLatest({
   return (
     <div className="mt-20">
       <div className="flex justify-between">
-        <Heading headingLevel={headingLevel}>
-          {title}
-        </Heading>
-        <Link href="projects/o-weather">
+        <Heading headingLevel={headingLevel}>{title}</Heading>
+        <Link href="projects/eucrosslink">
           <ButtonIcon />
         </Link>
       </div>
-      <PictureBackground imageSrc="/o-weather.png" />
+      <PictureBackground imageSrc="/eucrosslink.png" />
     </div>
   );
 }

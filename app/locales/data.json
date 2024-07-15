@@ -3,7 +3,6 @@
     "id": 1,
     "project_name": "Webstellar",
     "slug": "webstellar",
-    "small_description": "Full-stack project on the theme of astronomy and space.",
     "image_path": "webstellar.png",
     "link": "https://webstellar-xenon.vercel.app",
     "description": "WebStellar is a collaborative project from my training. Inspired by our fascination with astronomy and space, WebStellar provides an immersive online experience where users can explore, learn, and engage with the vast digital universe.",
@@ -18,9 +17,8 @@
     "id": 2,
     "project_name": "O-Weather",
     "slug": "o-weather",
-    "small_description": "A cool and minimalist weather app.",
     "image_path": "o-weather.png",
-    "link": "https://o-weather.surge.sh/",
+    "link": "https://o-weather.surge.sh",
     "description": "O-Weather is a small web application that gives you the weather in real time for the city you want. No ads, just what you need in one click.",
     "title_1": "Built-in auto-completion",
     "content_1": "Auto-completion allows you to have a more precise city search by offering suggestions of matching cities as you type the first few letters.",
@@ -28,5 +26,19 @@
     "content_2": "Provides up-to-date information about the current weather conditions, including temperature, humidity, wind speed, allowing you to stay informed about the present weather conditions at a glance.",
     "title_3": "Forecast weather",
     "content_3": "This feature presents forecasts for upcoming weather conditions, including temperature, humidity probabilities and wind speed, allowing you to plan ahead and make informed decisions based on future weather expectations."
+  },
+  {
+    "id": 3,
+    "project_name": "Eucrosslink",
+    "slug": "eucrosslink",
+    "image_path": "eucrosslink.png",
+    "link": "https://eucrosslink.org",
+    "description": "This company website was my first professional web development project. While the project itself was not particularly complex, it provided invaluable experience in understanding and translating client needs into a functional and aesthetically pleasing website.",
+    "title_1": "Internationalization",
+    "content_1": "The client wanted a website that could be easily translated into multiple languages. I used the next-intl library to implement internationalization, allowing the users to easily switch between languages.",
+    "title_2": "Form validation",
+    "content_2": "This part was particularly challenging for me since I had never worked with form validation before, neither on implementing a real contact form. With some research I came across some librairies such as react-hook-form for the form validation, paired with zod for the schema validation. After reading the documentation I was able to make it work. I was very proud !",
+    "title_3": "Email",
+    "content_3": "After all the form validation was done, it was time to dig into the email sending part. I had used emailjs before, but I wanted a more complete and customizable solution. I found Resend, a service that allows you to send emails. And after trial, error and reading the documentation, I managed to make it work."
   }
 ]
