@@ -4,6 +4,7 @@ import { ProjectCard } from "../ui/block/projectCard";
 
 export default function Page() {
   const projects = data;
+
   return (
     <>
       <div className="animate-fade-in-down">
