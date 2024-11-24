@@ -23,16 +23,6 @@ export default function Header() {
           >
             hey, I&apos;m martin
           </Heading>
-          <motion.div
-            animate={{ x: [0, 5, 0], rotateZ: [0, 10, 0] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "mirror",
-            }}
-          >
-            🖐️
-          </motion.div>
         </div>
         <motion.span
           initial={{ x: 20, opacity: 0 }}
@@ -40,7 +30,7 @@ export default function Header() {
           transition={{ type: "spring", delay: 0.3 }}
           className="text-muted-foreground/90 tracking-tight"
         >
-          Front-End Developer.
+          Web Developer.
         </motion.span>
       </div>
     </div>

@@ -3,6 +3,7 @@ import PictureBackground from "@/components/component/pictureBackground";
 import TextBlock from "@/app/ui/block/textBlock";
 import Heading from "@/app/ui/block/heading";
 import { ProjectType } from "@/app/lib/defintion";
+import Line from "@/app/ui/block/line";
 
 export default function ProjectSingle({ project }: { project: ProjectType }) {
   return (
@@ -51,6 +52,7 @@ export default function ProjectSingle({ project }: { project: ProjectType }) {
           <TextBlock title={project.title_3}>{project.content_3}</TextBlock>
         </article>
       </div>
+      <Line />
     </>
   );
 }

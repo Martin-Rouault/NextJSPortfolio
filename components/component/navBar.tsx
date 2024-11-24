@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { ThemeButton } from "./theme/theme";
 import Home from "@/app/icons/home";
 import Work from "@/app/icons/work";
+import Lab from "@/app/icons/lab";
 import {
   Tooltip,
   TooltipContent,
@@ -15,6 +16,7 @@ import {
 
 const links = [
   { href: "/", tooltip: "Home", svg: <Home /> },
+  { href: "/lab", tooltip: "Lab", svg: <Lab /> },
   { href: "/projects", tooltip: "Work", svg: <Work /> },
 ];
 
@@ -22,6 +24,7 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHovered, setIsHovered] = useState({
     home: false,
+    lab: false,
     work: false,
     theme: false,
   });

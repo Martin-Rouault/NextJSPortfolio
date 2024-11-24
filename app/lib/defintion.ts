@@ -18,3 +18,19 @@ export type ProjectSingle = {
   small_description: string;
   project_name: string;
 };
+
+export type LabSingle = {
+  id: number;
+  small_description: string;
+  project_name: string;
+};
+
+export type LabType = {
+  id: number;
+  slug: string;
+  project_name: string;
+  image_path: string;
+  iframe_src: string;
+  link: string;
+  description: string;
+};
