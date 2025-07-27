@@ -1,11 +1,20 @@
 [
-  {
-    "id": 1,
-    "project_name": "3D-Globe",
-    "slug": "globe",
-    "image_path": "globe.webp",
-    "iframe_src": "https://3d-globe-three-js.vercel.app/",
-    "link": "https://3d-globe-three-js.vercel.app/",
-    "description": "3D globe built with the Three.js library. It uses GeoJSON data to display country borders and offers simple user interaction."
-  }
+    {
+        "id": 1,
+        "project_name": "3D-Globe",
+        "slug": "globe",
+        "image_path": "globe.webp",
+        "iframe_src": "https://3d-globe-three-js.vercel.app/",
+        "link": "https://3d-globe-three-js.vercel.app/",
+        "description": "3D globe built with the Three.js library. It uses GeoJSON data to display country borders and offers simple user interaction."
+    },
+    {
+        "id": 2,
+        "project_name": "Card",
+        "slug": "card",
+        "image_path": "card.webp",
+        "iframe_src": "https://three-d-card.vercel.app/",
+        "link": "https://three-d-card.vercel.app/",
+        "description": "A cool looking card, just to test the TextGeometry class!"
+    }
 ]
